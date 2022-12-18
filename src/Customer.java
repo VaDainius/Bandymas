@@ -1,11 +1,14 @@
 public class Customer {
 
     private String vardas;
+    private String pavarde;
     private int amzius;
 
-    public Customer(String vardas, int amzius) {
+
+    public Customer(String vardas, String pavarde, int amzius) {
         this.vardas = vardas;
         this.amzius = amzius;
+        this.pavarde = pavarde;
     }
 
     public String getVardas() {
@@ -16,10 +19,15 @@ public class Customer {
         return amzius;
     }
 
+    public String getPavarde() {
+        return pavarde;
+    }
+
     @Override
     public String toString() {
         return "Customer: " +
-                "vardas - " + vardas +
-                ", amzius - " + amzius;
+                vardas + ", " +
+                pavarde + ", " +
+                amzius + " metu(-ai)";
     }
 }
