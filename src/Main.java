@@ -1,15 +1,21 @@
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello world!");
+        List <Customer> customers = List.of(
+                new Customer("Joans", 20),
+                new Customer("Elena", 40),
+                new Customer("Aurimas", 39),
+                new Customer("Giedre", 21),
+                new Customer("Virzilas", 42),
+                new Customer("Anthony", 31),
+                new Customer("Britney", 25)
 
-        System.out.println("it's another try for GIT");
+        );
 
-        System.out.println("-----------------");
-
-        System.out.println("this program suppose to help learning");
-
-        System.out.println("----------------");
+        customers.stream().
+                forEach(System.out::println);
     }
 }
